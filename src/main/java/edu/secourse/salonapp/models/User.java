@@ -1,5 +1,6 @@
 package edu.secourse.salonapp.models;
 
+import java.util.Objects;
 import java.util.Random;
 
 public class User {
@@ -65,6 +66,18 @@ public class User {
         this.password = pw;
         this.name = name;
         this.emailAddress = emAddr;
-        this.role = role;
+        assignRole(role);
+    }
+
+    private void assignRole(String s){
+        if (Objects.equals(s, "S")) {
+            this.role = "Stylist";
+        } else if (Objects.equals(s, "A")) {
+            this.role = "Admin";
+        } else if (Objects.equals(s, "C")) {
+            this.role = "Customer";
+        } else {
+            // Error Handling
+        }
     }
 }
