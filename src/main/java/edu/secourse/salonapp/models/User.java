@@ -66,18 +66,15 @@ public class User {
         this.password = pw;
         this.name = name;
         this.emailAddress = emAddr;
-        assignRole(role);
+        this.assignRole(role);
     }
 
     private void assignRole(String s){
-        if (Objects.equals(s, "S")) {
-            this.role = "Stylist";
-        } else if (Objects.equals(s, "A")) {
-            this.role = "Admin";
-        } else if (Objects.equals(s, "C")) {
-            this.role = "Customer";
-        } else {
-            // Error Handling
+        switch (s.toUpperCase()) {
+            case "S" -> this.role = "Stylist";
+            case "A" -> this.role = "Admin";
+            case "C" -> this.role = "Customer";
+            default -> System.err.println("Role Not Assigned Properly to id:" + this.accountId + ", username: " + this.username);
         }
     }
 }
