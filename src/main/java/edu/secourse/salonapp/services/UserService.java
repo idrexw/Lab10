@@ -1,4 +1,4 @@
 package edu.secourse.salonapp.services;
 
-public class Service {
+public class UserService {
 }
