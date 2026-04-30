@@ -1,5 +1,7 @@
 package edu.secourse.salonapp.models;
 
+import edu.secourse.salonapp.services.UserService;
+
 import java.util.Objects;
 import java.util.Random;
 
@@ -59,22 +61,12 @@ public class User {
         this.role = role;
     }
 
-    public User(String un, String pw, String name, String emAddr, String role) {
+    public User(String un, String pw, String name, String emAddr) {
         Random rand = new Random();
         this.accountId = rand.nextInt(10000000,99999999);
         this.username = un;
         this.password = pw;
         this.name = name;
         this.emailAddress = emAddr;
-        this.assignRole(role);
-    }
-
-    private void assignRole(String s){
-        switch (s.toUpperCase()) {
-            case "S" -> this.role = "Stylist";
-            case "A" -> this.role = "Admin";
-            case "C" -> this.role = "Customer";
-            default -> System.err.println("Role Not Assigned Properly to id:" + this.accountId + ", username: " + this.username);
-        }
     }
 }
