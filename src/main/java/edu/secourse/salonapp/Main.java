@@ -2,11 +2,9 @@ package edu.secourse.salonapp;
 
 import edu.secourse.salonapp.models.User;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        User test = new User("1", "1", "1", "2", "2");
+        User test = new User("1", "1", "1", "2");
         System.out.println(test.getAccountId());
     }
 }
