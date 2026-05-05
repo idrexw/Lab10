@@ -4,7 +4,7 @@ import edu.secourse.salonapp.models.User;
 
 public class Main {
     public static void main(String[] args) {
-        User test = new User("1", "1", "1", "2");
+        User test = new User("1", "1", "1", "2", role);
         System.out.println(test.getAccountId());
     }
 }

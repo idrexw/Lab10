@@ -1,8 +1,5 @@
 package edu.secourse.salonapp.models;
 
-import edu.secourse.salonapp.services.UserService;
-
-import java.util.Objects;
 import java.util.Random;
 
 public class User {
@@ -61,7 +58,7 @@ public class User {
         this.role = role;
     }
 
-    public User(String un, String pw, String name, String emAddr) {
+    public User(String un, String pw, String name, String emAddr, String role) {
         Random rand = new Random();
         this.accountId = rand.nextInt(10000000,99999999);
         this.username = un;

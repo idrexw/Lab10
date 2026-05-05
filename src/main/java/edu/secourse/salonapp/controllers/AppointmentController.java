@@ -8,8 +8,8 @@ import java.util.Scanner;
 
 public class AppointmentController {
 
-    private AppointmentService appointmentService;
-    private Scanner scanner;
+    private final AppointmentService appointmentService;
+    private final Scanner scanner;
 
     public AppointmentController(AppointmentService appointmentService){
         this.appointmentService = appointmentService;
