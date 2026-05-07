@@ -65,5 +65,6 @@ public class User {
         this.password = pw;
         this.name = name;
         this.emailAddress = emAddr;
+        this.role = role;
     }
 }
